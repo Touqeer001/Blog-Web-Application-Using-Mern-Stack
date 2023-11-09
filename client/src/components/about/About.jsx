@@ -56,7 +56,7 @@ const About = () => {
 
       <Wrapper>
         <Heading variant="h3">Blog For U</Heading>
-        {/* <Typography>Create Your Blog.Read up to date information in all fields</Typography> */}
+        {/* <Typography>Create Your Blog.Read up to date information in all fields</Typography..> */}
         <Text variant="h5">
           I'am a full satck devloper Specilaization in MERN Technology.
           <Box component="span" style={{ marginLeft: 5 }}>
