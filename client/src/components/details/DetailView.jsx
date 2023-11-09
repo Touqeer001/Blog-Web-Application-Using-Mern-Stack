@@ -105,7 +105,7 @@ const DetailView = () => {
               <EditIcon color="primary" />
             </Link>
             <DeleteIcon onClick={() => deleteBlog()} color="error" />
-          </>
+          </Box>
         )}
       </Box>
       <Heading>{post.title}</Heading>
