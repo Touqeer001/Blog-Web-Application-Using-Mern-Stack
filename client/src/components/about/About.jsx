@@ -55,7 +55,7 @@ const About = () => {
       </Banner>
 
       <Wrapper>
-        <Heading variant="h3">Blog For U</Heading>
+        <Heading variant="h3">Blog For U.</Heading>
         {/* <Typography>Create Your Blog.Read up to date information in all fields</Typography..> */}
         <Text variant="h5">
           I'am a full satck devloper Specilaization in MERN Technology.
@@ -66,7 +66,7 @@ const About = () => {
           </Box>
         </Text>
         <Text variant="h5">
-          Want to Talk wit me ? Reach out to me on
+          Want to Talk wit me ? Reach out to me on.
           <Box component="span" style={{ marginLeft: 5 }}>
             <Link href="" color="inherit" target="_blank">
               <Instagram />
