@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Link, useSearchParams } from "react-router-dom";
 
+//import { categories } from "../../constants/data";
 import { categories } from "../../constants/data";
 
 const StyledTable = styled(Table)`
