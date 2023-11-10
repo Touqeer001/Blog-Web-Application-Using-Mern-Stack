@@ -32,7 +32,7 @@ const Banner = () => {
     <Image>
       <Heading>BLOG for U.</Heading>
       <SubHeading>
-        Create Your Own Blog.Read All Types of Blog any Where at any Time.
+        Create Your Own Blog. Read All Types of Blog any Where at any Time.
       </SubHeading>
     </Image>
   );
