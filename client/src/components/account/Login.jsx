@@ -79,7 +79,7 @@ const signupInitialValues = {
 const Login = ({ isUserAuthenticated }) => {
   const [login, setLogin] = useState(loginInitialValues);
   const [signup, setSignup] = useState(signupInitialValues);
-  const [error, showError] = useState("");
+  const [error, showError] = useState(" ");
   const [account, toggleAccount] = useState("login");
 
   const navigate = useNavigate();
@@ -103,7 +103,7 @@ const Login = ({ isUserAuthenticated }) => {
   const loginUser = async () => {
     let response = await API.userLogin(login);
     if (response.isSuccess) {
-      alert("Login Successful.....");
+      alert("Login Successful..");
       showError("");
 
       sessionStorage.setItem(
@@ -175,7 +175,7 @@ const Login = ({ isUserAuthenticated }) => {
               onClick={() => toggleSignup()}
               style={{ marginBottom: 50 }}
             >
-              Create an account
+              Create an account.
             </SignupButton>
           </Wrapper>
         ) : (
@@ -202,7 +202,7 @@ const Login = ({ isUserAuthenticated }) => {
             <SignupButton onClick={() => signupUser()}>Signup</SignupButton>
             <Text style={{ textAlign: "center" }}>OR</Text>
             <LoginButton variant="contained" onClick={() => toggleSignup()}>
-              Already have an account
+              Already have an account..
             </LoginButton>
           </Wrapper>
         )}
