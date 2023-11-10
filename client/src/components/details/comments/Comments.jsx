@@ -72,7 +72,7 @@ const Comments = ({ post }) => {
         <Image src={url} alt="dp" />
         <StyledTextArea
           // rowsMin={4}
-          placeholder="Share Your Thoughts..."
+          placeholder="Share Your Thoughts."
           onChange={(e) => handleChange(e)}
           value={comment.comments}
         />
