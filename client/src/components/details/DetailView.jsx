@@ -1,11 +1,8 @@
 import { useState, useEffect, useContext } from "react";
-
 import { Box, Typography, styled } from "@mui/material";
 import { Delete, Edit } from "@mui/icons-material";
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 import { API } from "../../service/api";
-
 import { DataContext } from "../../context/DataProvider";
 
 // components
