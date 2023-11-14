@@ -78,18 +78,3 @@ const Post = ({ post }) => {
 };
 
 export default Post;
-
-// import { styled, Box, Typography } from '@mui/material';
-// const Post=({Post})=>{
-//     return(
-//         <Box>
-//             <img src={Post.picture} alt="blog"></img>
-//             <Typography>{Post.categories}</Typography>
-//             <Typography>{Post.title}</Typography>
-//             <Typography>{Post.username}</Typography>
-//             <Typography>{Post.description}</Typography>
-//         </Box>
-//     )
-
-// }
-// export default Post;
