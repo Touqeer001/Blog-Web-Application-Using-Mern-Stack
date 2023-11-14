@@ -42,10 +42,6 @@ const Image = styled("img")({
   borderRadius: "50%",
 
   marginBottom: "-7px",
-  // width: 50,
-  // height: 45,
-  // border-radius: '50%'
-  // margin-bottom: -13px.
 });
 
 const Comment = ({ comment, setToggle }) => {
