@@ -69,26 +69,7 @@ const ProcessError = async (error) => {
     // Request made and server responded with a status code
     // that falls out of the range of 2xx
     if (error.response?.status === 403) {
-      // const { url, config } = error.response;
-      // console.log(error);
-      // try {
-      //     let response = await API.getRefreshToken({ token: getRefreshToken() });
-      //     if (response.isSuccess) {
       sessionStorage.clear();
-      //         setAccessToken(response.data.accessToken);
-
-      //         const requestData = error.toJSON();
-
-      //         let response1 = await axios({
-      //             method: requestData.config.method,
-      //             url: requestData.config.baseURL + requestData.config.url,
-      //             headers: { "content-type": "application/json", "authorization": getAccessToken() },
-      //             params: requestData.config.params
-      //         });
-      //     }
-      // } catch (error) {
-      //     return Promise.reject(error)
-      // }
     } else {
       console.log("ERROR IN RESPONSE: ", error.toJSON());
       return {
