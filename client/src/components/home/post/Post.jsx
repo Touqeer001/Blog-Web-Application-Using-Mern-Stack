@@ -33,7 +33,7 @@ const Text = styled(Typography)`
 
 const Heading = styled(Typography)`
   // font-size: 18px;
-  // font-weight: 600
+
   // color: red
   color: black;
   text-align: center;
