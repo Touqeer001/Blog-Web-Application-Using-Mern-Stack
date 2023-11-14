@@ -35,10 +35,6 @@ const ImageStyle = styled("img")({
   width: 100,
   marginLeft: -607,
   marginTop: -12,
-
-  // width: 98px;
-  // margin-left: -607%;
-  // height: auto;
 });
 
 const Header = () => {
