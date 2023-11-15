@@ -50,16 +50,14 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 <br />
 
-## Screens ( All screens are responsive along with Dark Mode)
+## Screens ( All screens are responsive)
 - Homepage / Landing Page
-- Product Listing Page with Filters
-- Product Description Page
-- Cart Management Page
-- Wishlist/Favourites Management Page
-- Checkout with Address Management Page
 - Login / Logout Page
 - Signup Page
-- Order Summary Page
+- Categories Page
+- Create Post Page
+- Upload PAge
+
 
 
 <br />
@@ -67,23 +65,30 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 ## 🚀 Features
 - Login and Signup User Account
-- JWT (Json Web Token) Authentication and BcryptJS Password Hashing 
+- JWT (Json Web Token) Authentication and BcryptJS Password Hashing
+- User authentication and authorization with JWT
+- CRUD operations for blog posts and user profiles .
+- User can comments and delete comments.
+- Upload Post
+- User Can Read other Post. 
 
 
 <br />
 
-## Glimpses of Nike-Clone 🙈 :
+## Glimpses of Blog-Application 🙈 :
 
 
 <table>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3"
 " alt="home" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955109-b51e3e81-4cd8-4f00-a8cd-873c82882a15.png" alt="coupons" /></td>
+  
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955141-44aefea0-a9ee-4c3a-93e0-094ca9214e54.jpeg" alt="signup" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955129-e5392377-e72a-4868-883f-5a244fc9bc87.jpeg" alt="login" /></td>
+    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/934a6e5d-47a9-4a90-9ef2-0defc845c487
+" alt="signup" /></td>
+    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3bb302b1-138a-45ae-b5e0-0e7cd0d57e1a
+g" alt="login" /></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/91532881/175955097-9fe2e5a5-b4f4-4c1f-beb7-4080186e5a17.jpeg" alt="allProducts" /></td>
