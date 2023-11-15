@@ -219,8 +219,8 @@ To run this project, you will need to add the following environment variables to
 
 If you want to contact me, you can reach me through below handles.
 
-<!--[![linkedin](https://img.shields.io/badge/Touqee_Ansari?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/touqeer-ansari)
-[![linkedin](https://img.shields.io/badge/Touqeer_Ansari-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/touqeer-ansari)
+
+[![linkedin](https://img.shields.io/badge/touqeer-ansari-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/touqeer-ansari)
 [![GitHub](https://img.shields.io/badge/Touqeer001?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/Touqeer001)
 
 © 2023 Touqeer Ansari
