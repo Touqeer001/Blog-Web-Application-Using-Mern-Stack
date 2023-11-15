@@ -80,9 +80,7 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 <table>
   <tr>
-    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3"
-      
- alt="home" /></td>
+    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3" alt="home" /></td>
   <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/a8ba93c5-7302-4183-a370-3750a864dd15" alt="ReadBlog" /></td>
   </tr>
   <tr>
