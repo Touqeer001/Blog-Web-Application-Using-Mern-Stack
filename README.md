@@ -138,7 +138,7 @@ The project repository can be found in [GitHub link](https://github.com/Touqeer0
 ```
 Using HTTPS
 
-# git clone https://github.com/m-sehrawat/Nike-Clone.git](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack.git
+# git clone https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack.git
 ```
 
 + Open terminal on your workspace with
