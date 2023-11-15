@@ -81,33 +81,27 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 <table>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3"
-" alt="home" /></td>
-  
-  </tr>
+" alt="home" /></td> </tr>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/934a6e5d-47a9-4a90-9ef2-0defc845c487" alt="signup" /></td>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3bb302b1-138a-45ae-b5e0-0e7cd0d57e1ag" alt="login" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955097-9fe2e5a5-b4f4-4c1f-beb7-4080186e5a17.jpeg" alt="allProducts" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175957017-3530fe22-46ae-4bf7-a645-55f7a5f25ed9.jpeg" alt="men" /></td>
+    <td><img src="About page_2023-11-15_143638_localhost](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/7837998f-0e56-4681-a48f-762f95fb459d" alt="AboutPage" /></td>
+    <td><img src="(https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/fd134ea1-074a-4ca4-9214-106ce98f0bf1"
+ alt="Contact" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955142-dd33e21a-49a9-4aeb-89e7-edb3e871828f.jpeg" alt="women" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955126-2874a5c1-8655-40ab-b9ce-67275139e70e.jpeg" alt="kids" /></td>
+    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/235227ec-d3e9-4c40-9a97-3d4f7cef30c5"
+" alt="CreateBlog" /></td>
+    <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/a8ba93c5-7302-4183-a370-3750a864dd15" alt="ReadBlog" /></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/91532881/175955114-1090036d-2e73-46fa-8aca-8ef9ffab1724.jpeg" alt="description" /></td>
     <td><img src="https://user-images.githubusercontent.com/91532881/175955117-edff5eaf-7507-4580-b3b8-3aea6c089840.jpeg" alt="descriptionDark" /></td>
   </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955106-867749b1-4838-40dc-b184-145f10d1eec2.jpeg" alt="cart" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955107-f93e13a0-6c50-46e8-a5f3-09d15421e97b.jpeg" alt="checkout" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955137-828f89b2-648e-4a68-885a-fa3f3f29b55c.png" alt="razorpay" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955133-96792a4b-7e70-4e1e-a5cf-999da70a9c95.jpeg" alt="orders" /></td>
-  </tr>
+  
+ 
 </table>
 
 <br />
