@@ -106,32 +106,13 @@ alt="CreateBlog" /></td>
 
 <br />
 
-## Test Coupon Codes
-```
-NIKE5 (for 5% Off)
-
-NIKE10 (for 10% Off)
-
-NIKE15 (for 15% Off)
-
-NIKE20 (for 15% Off)
-
-NIKE25 (for 25% Off)
-
-NIKE30 (for 30% Off)
-```
-
-## Razorpay test payment Cards
-
-[Click here to use the razorpay testing payment methods](https://razorpay.com/docs/payments/payments/test-card-upi-details/)
 
 
-<br />
 
 
 <h2>Demo</h2>
 
-[Click here to see the presentation video of this project](https://www.linkedin.com/posts/m-sehrawat_reactjs-nike-nikecareers-activity-6947552300534042624-me2_?utm_source=linkedin_share&utm_medium=member_desktop_web)
+[Click here to see the presentation video of this project]()
 
 
 <br />
@@ -139,7 +120,7 @@ NIKE30 (for 30% Off)
 
 ## Getting Started
 
-This project was built using React, Redux, Chakra UI, HTML, CSS, JavaScript, Rest API, Node JS, Express and MongoDB with JWT and RazorPay integration. It is an e-commerce web application and for running on your local environment you should follow these guidelines.
+This project was built using React,MAterialUi, JavaScript, Rest API, Node JS, Express and MongoDB with JWT. It is an Blog web application and for running on your local environment you should follow these guidelines.
 
 
 ### Prerequisites
@@ -151,19 +132,19 @@ This project was built using React, Redux, Chakra UI, HTML, CSS, JavaScript, Res
 ### Setup
 
 
-The project repository can be found in [GitHub link](https://github.com/m-sehrawat/Nike-Clone) or just clone the project using this command.
+The project repository can be found in [GitHub link](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack.git) or just clone the project using this command.
 
 
 ```
 Using HTTPS
 
-# git clone https://github.com/m-sehrawat/Nike-Clone.git
+# git clone https://github.com/m-sehrawat/Nike-Clone.git](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack.git
 ```
 
 + Open terminal on your workspace with
 
 ```
-cd /home/workspace/Nike-Clone
+cd /home/workspace/Blog-Web-Application-Using-Mern-Stack
 ```
 
 
@@ -225,19 +206,11 @@ To run this project, you will need to add the following environment variables to
 
 `MONGO_PATH`
 
-`RAZORPAY_KEY_ID`
-
-`RAZORPAY_KEY_SECRET`
-
-
 
 ### Tools used on this project
 
 - Visual Studio Code
-- Vite-JS template
-- MongoDB compass
-- Razorpay Dashboard to monitor payments
-
+- MongoDB atlas
 <br />
 
 
@@ -246,10 +219,10 @@ To run this project, you will need to add the following environment variables to
 
 If you want to contact me, you can reach me through below handles.
 
-[![linkedin](https://img.shields.io/badge/Mohit_Sehrawat-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-sehrawat/)
-[![GitHub](https://img.shields.io/badge/Mohit_Sehrawat-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/m-sehrawat/)
+[![linkedin](https://img.shields.io/badge/Mohit_Sehrawat-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/touqeer-ansari)
+[![GitHub](https://img.shields.io/badge/Mohit_Sehrawat-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/Touqeer001)
 
-© 2022 Mohit Sehrawat
+© 2023 Touqeer Ansari
 
 
 
