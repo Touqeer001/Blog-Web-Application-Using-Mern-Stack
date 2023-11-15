@@ -45,7 +45,7 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 
 
-![cover](https://user-images.githubusercontent.com/91532881/1Opera Snapshot_2023-11-15_141240_localhost.png)
+![cover](https://Opera Snapshot_2023-11-15_141240_localhost.png.png)
 Opera Snapshot_2023-11-15_141240_localhost.png
 
 <br />
