@@ -45,7 +45,7 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 
 
-![cover](https://user-images.githubusercontent.com/91532881/175955112-da88c18c-ac5e-455a-9ac5-047c7db4f894.png)
+![cover](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3)
 
 
 <br />
