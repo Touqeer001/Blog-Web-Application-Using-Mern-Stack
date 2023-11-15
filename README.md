@@ -81,7 +81,10 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 <table>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3"
- alt="home" /></td> </tr>
+      
+ alt="home" /></td>
+  <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/a8ba93c5-7302-4183-a370-3750a864dd15" alt="ReadBlog" /></td>
+  </tr>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/934a6e5d-47a9-4a90-9ef2-0defc845c487" alt="signup" /></td>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3bb302b1-138a-45ae-b5e0-0e7cd0d57e1ag" alt="login" /></td>
@@ -93,13 +96,10 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
   </tr>
   <tr>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/235227ec-d3e9-4c40-9a97-3d4f7cef30c5"
-" alt="CreateBlog" /></td>
+alt="CreateBlog" /></td>
     <td><img src="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/a8ba93c5-7302-4183-a370-3750a864dd15" alt="ReadBlog" /></td>
   </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955114-1090036d-2e73-46fa-8aca-8ef9ffab1724.jpeg" alt="description" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955117-edff5eaf-7507-4580-b3b8-3aea6c089840.jpeg" alt="descriptionDark" /></td>
-  </tr>
+ 
   
  
 </table>
