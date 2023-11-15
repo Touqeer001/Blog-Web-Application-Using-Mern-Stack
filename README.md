@@ -68,18 +68,7 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 ## 🚀 Features
 - Login and Signup User Account
 - JWT (Json Web Token) Authentication and BcryptJS Password Hashing 
-- Product Filters Based on Price, Category, Size, Color and Gender
-- Product Sorting Based on Price, Rating and Name
-- Product Filtering and Sorting works together 
-- My Orders Section for details of all ordered item
-- Wishlist Add and Remove Items
-- Cart Add and Remove Items 
-- Cart Update Quantities 
-- Address Management
-- Order Summary
-- Coupons provided for discount
-- Razorpay Payment Gateway
-- Darkmode available
+
 
 <br />
 
@@ -88,7 +77,8 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955122-200a6ccb-54a5-4f39-9bc2-cd3ba3a4d102.jpeg" alt="home" /></td>
+    <td><img src="https://user-images.githubusercontent.com/![Opera Snapshot_2023-11-15_141240_localhost](https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/assets/126690073/3007acbc-4ea3-46e6-b88b-7b23f03f7fc3)
+" alt="home" /></td>
     <td><img src="https://user-images.githubusercontent.com/91532881/175955109-b51e3e81-4cd8-4f00-a8cd-873c82882a15.png" alt="coupons" /></td>
   </tr>
   <tr>
