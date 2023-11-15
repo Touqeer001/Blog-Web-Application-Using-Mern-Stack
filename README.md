@@ -11,12 +11,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
-  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
-  <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5" />
+  <img src="https://img.shields.io/badge/@material-ui/core?style=for-the-badge&logo=@material-ui/core&logoColor=white" alt="@material-ui/core" />
+ 
 </p>
 
 
@@ -30,39 +28,25 @@
 </p>
 
 
-<h4 align="center">Payment Gateway:</h4>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=3395FF" alt="razorpay" />
-</p>
 
 
-<h4 align="center">Deployed On:</h4>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
-  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku" />
-</p>
-
-
-
-<h3 align="center"><a href="https://mohit-nikeclone.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
 <p align="center">
   <br />&#10023;
   <a href="#Demo">View Demo</a> &#10023;
-  <a href="https://github.com/m-sehrawat/Nike-Clone/issues">Report Bug</a> &#10023;
+  <a href="https://github.com/Touqeer001/Blog-Web-Application-Using-Mern-Stack/issues">Report Bug</a> &#10023;
   <a href="#Getting-Started">Getting Started</a> &#10023; 
   <a href="#Install">Installing</a> &#10023;
   <a href="#Contact">Author</a> &#10023;
 </p>
 
 
-Nike Clone is MERN Stack e-commerce web application that allows you to buy shoes & clothes online with payment gateway integration. It has a variety of categories, just visit the product listing page and you will see all the products, apply filters as per your need and in just a few clicks you can buy any products from the website. This project is just for educational purpose.
+Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a seamless user experience, powered by the latest web technologies. Explore engaging content, seamless navigation, and a dynamic platform designed for both creators and readers.A full - stack web application that allows users to create , read, update , and delete blog posts. Built using the MERN stack to provide a seamless user experience
 
 
 
-![cover](https://user-images.githubusercontent.com/91532881/175955112-da88c18c-ac5e-455a-9ac5-047c7db4f894.png)
+![cover](https://user-images.githubusercontent.com/91532881/1Opera Snapshot_2023-11-15_141240_localhost.png)
+Opera Snapshot_2023-11-15_141240_localhost.png
 
 <br />
 
