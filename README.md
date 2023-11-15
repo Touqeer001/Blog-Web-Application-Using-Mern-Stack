@@ -45,8 +45,8 @@ Introducing our cutting-edge blog web application! 🌐 Immerse yourself in a se
 
 
 
-![cover](https://www.google.com/url?sa=i&url=https%3A%2F%2Frevenuearchitects.com%2Fblog%2Fblog-blogs-blog-posts-not-blogs%2F&psig=AOvVaw0wftFkzDcGhg9vG98nS2S4&ust=1700124617504000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDogvLPxYIDFQAAAAAdAAAAABAI)
-Opera Snapshot_2023-11-15_141240_localhost.png
+![cover](https://user-images.githubusercontent.com/91532881/175955112-da88c18c-ac5e-455a-9ac5-047c7db4f894.png)
+
 
 <br />
 
