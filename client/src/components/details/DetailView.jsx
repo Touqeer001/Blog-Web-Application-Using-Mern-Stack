@@ -2,11 +2,13 @@ import { useState, useEffect, useContext } from "react";
 import { Box, Typography, styled } from "@mui/material";
 import { Delete, Edit } from "@mui/icons-material";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { API } from "../../service/api";
+
 import { DataContext } from "../../context/DataProvider";
 
 // components
 import Comments from "./comments/Comments";
+import { deletePost, getPostById } from "../../utils/APIRoutes";
+import axios from "axios";
 
 const Container = styled(Box)(({ theme }) => ({
   margin: "50px 100px",
@@ -79,17 +81,44 @@ const DetailView = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await API.getPostById(id);
-      if (response.isSuccess) {
-        setPost(response.data);
+      try {
+        const token = sessionStorage.getItem("accessToken");
+        const response = await axios.get(`${getPostById}/${id}`, {
+          headers: {
+            Authorization: token, // Include the token in the Authorization header
+          },
+        }); // Fetch post by ID
+        console.log("Get Post by ID Response:", response);
+
+        if (response.status === 200) {
+          setPost(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching post:", error);
+        // Handle error appropriately
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const deleteBlog = async () => {
-    await API.deletePost(post._id);
-    navigate("/");
+    try {
+      const token = sessionStorage.getItem("accessToken");
+
+      const response = await axios.delete(`${deletePost}/${post._id}`, {
+        headers: {
+          Authorization: token, 
+        },
+      }); // Delete post by ID
+      console.log("Delete Post Response:", response);
+
+      if (response.status === 200) {
+        navigate("/"); // Redirect to home after deletion
+      }
+    } catch (error) {
+      console.error("Error deleting post:", error);
+      // Handle error appropriately
+    }
   };
 
   return (

@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
+import axios from "axios";
 
 import { TextField, Box, Button, Typography, styled } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 // import { API } from "../../service/api";
 import { DataContext } from "../../context/DataProvider";
+import { userLogin, userSignup } from "../../utils/APIRoutes";
 
 const Component = styled(Box)`
   width: 400px;
@@ -101,42 +103,68 @@ const Login = ({ isUserAuthenticated }) => {
   };
 
   const loginUser = async () => {
-    let response = await API.userLogin(login);
-    if (response.isSuccess) {
-      alert("Login Successful..");
-      showError("");
+    try {
+      const response = await axios.post(userLogin, login);
 
-      sessionStorage.setItem(
-        "accessToken",
-        `Bearer ${response.data.accessToken}`
-      );
-      sessionStorage.setItem(
-        "refreshToken",
-        `Bearer ${response.data.refreshToken}`
-      );
-      setAccount({
-        name: response.data.name,
-        username: response.data.username,
-      });
+      // Assuming the login is successful if the accessToken is present
+      if (response.status === 200 && response.data.accessToken) {
+        alert("Login Successful.");
+        showError("");
 
-      isUserAuthenticated(true);
-      setLogin(loginInitialValues);
-      navigate("/");
-    } else {
-      alert("Login failed. Please try again.");
-      showError("Something went wrong! please try again later");
+        // Storing tokens in sessionStorage
+        sessionStorage.setItem(
+          "accessToken",
+          `Bearer ${response.data.accessToken}`
+        );
+        sessionStorage.setItem(
+          "refreshToken",
+          `Bearer ${response.data.refreshToken}`
+        );
+
+        // Setting account information
+        setAccount({
+          name: response.data.name,
+          username: response.data.username,
+        });
+
+        // Updating user authentication state
+        isUserAuthenticated(true);
+
+        // Resetting login form
+        setLogin(loginInitialValues);
+
+        // Navigating to the home page
+        navigate("/");
+      } else {
+        alert("Login failed. Please try again.");
+        showError("Something went wrong! Please try again later.");
+      }
+    } catch (error) {
+      console.error("Login Error:", error);
+      showError("Something went wrong! Please try again later.");
     }
   };
 
   const signupUser = async () => {
-    let response = await API.userSignup(signup);
-    if (response.isSuccess) {
-      showError("");
-      alert("Signup Successful.....");
-      setSignup(signupInitialValues);
-      toggleAccount("login");
-    } else {
-      showError("Something went wrong! please try again later");
+    try {
+      const response = await axios.post(userSignup, signup);
+
+      // Assuming the signup is successful if the status is 200
+      if (response.status === 200 && response.data) {
+        showError("");
+        alert("Signup Successful.");
+
+        // Resetting the signup form
+        setSignup(signupInitialValues);
+
+        // Switching back to the login form after successful signup
+        toggleAccount("login");
+      } else {
+        showError("Something went wrong! Please try again later.");
+      }
+    } catch (error) {
+      console.error("Signup Error:", error);
+      showError("Something went wrong! Please try again later.");
     }
   };
 

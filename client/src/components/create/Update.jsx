@@ -11,7 +11,8 @@ import {
 import { AddCircle as Add } from "@mui/icons-material";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { API } from "../../service/api";
+import axios from "axios";
+import { getPostById, updatePost, uploadFile } from "../../utils/APIRoutes";
 
 const Container = styled(Box)(({ theme }) => ({
   margin: "50px 100px",
@@ -71,13 +72,34 @@ const Update = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await API.getPostById(id);
-      if (response.isSuccess) {
-        setPost(response.data);
+      try {
+        const token = sessionStorage.getItem("accessToken");
+        const response = await axios.get(`${getPostById}/${id}`,{
+          headers: {
+            Authorization: token, // Include the token in the Authorization header
+          },
+        }); // Replace with your actual endpoint
+        console.log("Fetch Post Response:", response);
+  
+        if (response.status === 200 && response.data) {
+          setPost(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching post data:", error);
+        // Handle error appropriately
       }
     };
     fetchData();
   }, []);
+
+  
+
+
+
+
+
+
+
 
   useEffect(() => {
     const getImage = async () => {
@@ -85,11 +107,23 @@ const Update = () => {
         const data = new FormData();
         data.append("name", file.name);
         data.append("file", file);
-
-        const response = await API.uploadFile(data);
-        if (response.isSuccess) {
-          post.picture = response.data;
-          setImageURL(response.data);
+  
+        try {
+          const response = await axios.post(uploadFile , data, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+              
+            },
+          });
+          console.log("File Upload Response:", response);
+  
+          if (response.status === 200 && response.data) {
+            post.picture = response.data; // Assuming the API returns the image URL or path
+            setImageURL(response.data); // Update imageURL state if needed
+          }
+        } catch (error) {
+          console.error("Error uploading file:", error);
+          // Handle error appropriately
         }
       }
     };
@@ -97,8 +131,22 @@ const Update = () => {
   }, [file]);
 
   const updateBlogPost = async () => {
-    await API.updatePost(post);
-    navigate(`/details/${id}`);
+    try {
+      const token = sessionStorage.getItem("accessToken");
+      const response = await axios.put(`${updatePost}/${post._id}`, post,{
+        headers: {
+          Authorization: token,
+        },
+      }); // Replace with your actual endpoint and post data
+      console.log("Update Post Response:", response);
+  
+      if (response.status === 200) {
+        navigate(`/details/${id}`); // Navigate to the post details page
+      }
+    } catch (error) {
+      console.error("Error updating post:", error);
+      // Handle error appropriately
+    }
   };
 
   const handleChange = (e) => {

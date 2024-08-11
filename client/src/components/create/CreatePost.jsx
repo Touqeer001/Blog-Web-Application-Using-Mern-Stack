@@ -11,8 +11,11 @@ import {
 import { AddCircle as Add } from "@mui/icons-material";
 import { useNavigate, useLocation } from "react-router-dom";
 
-import { API } from "../../service/api";
+
 import { DataContext } from "../../context/DataProvider";
+import { createPost, uploadFile } from "../../utils/APIRoutes";
+
+import axios from "axios";
 
 const Container = styled(Box)(({ theme }) => ({
   margin: "50px 100px",
@@ -70,31 +73,86 @@ const CreatePost = () => {
     ? post.picture
     : "https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc2V0dXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80";
 
-  useEffect(() => {
-    const getImage = async () => {
-      if (file) {
-        const data = new FormData();
-        data.append("name", file.name);
-        data.append("file", file);
 
-        const response = await API.uploadFile(data);
-        post.picture = response.data;
-      }
+
+ 
+  
+
+    useEffect(() => {
+      const getImage = async () => {
+        if (file) {
+          const data = new FormData();
+          data.append("name", file.name);
+          data.append("file", file);
+    
+          try {
+            const response = await axios.post(uploadFile, data, {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            });
+    
+            console.log("File Upload Response:", response);
+    
+            // Ensure response.data is in the format you expect
+            if (response.status === 200 && response.data) {
+              setPost((prevPost) => ({
+                ...prevPost,
+                picture: response.data, // Update picture URL or path
+              }));
+            }
+          } catch (error) {
+            console.error("Error uploading file:", error);
+            // Handle error appropriately
+          }
+        }
+      };
+    
+      getImage();
+    
+      // Update post state with categories and username
+      setPost((prevPost) => ({
+        ...prevPost,
+        categories: location.search?.split("=")[1] || "All",
+        username: account.username,
+      }));
+    }, [file, account.username, location.search]); // Dependencies to trigger the effect
+    
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setPost((prevPost) => ({
+        ...prevPost,
+        [name]: value,
+      }));
     };
-    getImage();
-    post.categories = location.search?.split("=")[1] || "All";
-    post.username = account.username;
-  }, [file]);
+    
+
+
+
+
 
   const savePost = async () => {
-    await API.createPost(post);
-    navigate("/");
+    try {
+      const token = sessionStorage.getItem("accessToken"); // Retrieve the token from sessionStorage
+  
+      const response = await axios.post(createPost, post, {
+        headers: {
+          Authorization: token, // Include the token in the Authorization header
+        },
+      });
+  
+      console.log("Create Post Response:", response);
+  
+      if (response.status === 200) {
+        navigate("/"); // Navigate to the homepage after successful post creation
+      }
+    } catch (error) {
+      console.error("Error creating post:", error);
+      // Handle error appropriately
+    }
   };
-
-  const handleChange = (e) => {
-    setPost({ ...post, [e.target.name]: e.target.value });
-  };
-
+  
   return (
     <Container>
       <Image src={url} alt="post" />

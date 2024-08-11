@@ -2,11 +2,12 @@ import { useState, useEffect, useContext } from "react";
 import { Box, TextareaAutosize, Button, styled } from "@mui/material";
 
 import { DataContext } from "../../../context/DataProvider";
+import axios from "axios";
 
-import { API } from "../../../service/api";
 
 //components
 import Comment from "./Comment";
+import { getAllComments, newComment } from "../../../utils/APIRoutes";
 
 const Container = styled(Box)`
   margin-top: 100px;
@@ -43,13 +44,27 @@ const Comments = ({ post }) => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await API.getAllComments(post._id);
-      if (response.isSuccess) {
-        setComments(response.data);
+      try {
+        const token = sessionStorage.getItem("accessToken");
+        const response = await axios.get(`${getAllComments}/${post._id}`,{
+          headers: {
+            Authorization: token, // Include the token in the Authorization header
+          },
+        });
+        console.log("Get All Comments Response:", response);
+  
+        if (response.status === 200 && response.data) {
+          setComments(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+        // Handle error appropriately
       }
     };
+  
     getData();
   }, [toggle, post]);
+  
 
   const handleChange = (e) => {
     setComment({
@@ -61,10 +76,26 @@ const Comments = ({ post }) => {
   };
 
   const addComment = async () => {
-    await API.newComment(comment);
-    setComment(initialValue);
-    setToggle((prev) => !prev);
+    try {
+      const token = sessionStorage.getItem("accessToken");
+      const response = await axios.post(newComment, comment,{
+        headers: {
+          Authorization: token, // Include the token in the Authorization header
+        },
+      }); // Pass the comment data
+  
+      console.log("Add Comment Response:", response);
+  
+      if (response.status === 200) {
+        setComment(initialValue); // Reset the comment input field
+        setToggle((prev) => !prev); // Toggle the state to refresh the comments list
+      }
+    } catch (error) {
+      console.error("Error adding comment:", error);
+      // Handle error appropriately
+    }
   };
+  
 
   return (
     <Box>

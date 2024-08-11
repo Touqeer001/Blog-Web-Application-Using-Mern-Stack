@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Grid, Box } from "@mui/material";
 import { Link, useSearchParams } from "react-router-dom";
-// import { getAllPosts } from '../../../service/api';
-import { API } from "../../../service/api";
+
 //components
 import Post from "./Post";
+import { getAllPosts } from "../../../utils/APIRoutes";
+import axios from "axios";
 
 const Posts = () => {
   const [posts, getPosts] = useState([]);
@@ -14,13 +15,28 @@ const Posts = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await API.getAllPosts({ category: category || "" });
-      if (response.isSuccess) {
-        getPosts(response.data);
+      try {
+        const token = sessionStorage.getItem("accessToken");
+        const response = await axios.get(getAllPosts, {
+          params: { category: category || "" },
+          headers: {
+            Authorization: token,
+          },
+        }); // Fetch posts with optional category filter
+
+        console.log("Get All Posts Response:", response);
+
+        if (response.status === 200) {
+          getPosts(response.data); // Set posts data
+        }
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+        // Handle error appropriately
       }
     };
+
     fetchData();
-  }, [category]); //api call
+  }, [category]);
 
   return (
     <>

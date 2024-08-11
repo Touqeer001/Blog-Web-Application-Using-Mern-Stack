@@ -3,8 +3,10 @@ import { useContext } from "react";
 import { Typography, Box, styled } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 
-import { API } from "../../../service/api";
+
 import { DataContext } from "../../../context/DataProvider";
+import axios from "axios";
+import { deleteComment } from "../../../utils/APIRoutes";
 
 const Component = styled(Box)`
   margin-top: 30px;
@@ -48,9 +50,24 @@ const Comment = ({ comment, setToggle }) => {
   const { account } = useContext(DataContext);
 
   const removeComment = async () => {
-    await API.deleteComment(comment._id);
-    setToggle((prev) => !prev);
+    try {
+      const token = sessionStorage.getItem("accessToken");
+      const response = await axios.delete(`${deleteComment}/${comment._id}`,{
+        headers: {
+          Authorization: token, // Include the token in the Authorization header
+        },
+      });
+      console.log("Delete Comment Response:", response);
+  
+      if (response.status === 200) {
+        setToggle((prev) => !prev); // Toggle the state to refresh the comments list
+      }
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      // Handle error appropriately
+    }
   };
+  
   const url = "https://static.thenounproject.com/png/12017-200.png";
 
   return (
