@@ -74,13 +74,12 @@ const Update = () => {
     const fetchData = async () => {
       try {
         const token = sessionStorage.getItem("accessToken");
-        const response = await axios.get(`${getPostById}/${id}`,{
+        const response = await axios.get(`${getPostById}/${id}`, {
           headers: {
             Authorization: token, // Include the token in the Authorization header
           },
-        }); // Replace with your actual endpoint
-        console.log("Fetch Post Response:", response);
-  
+        });
+
         if (response.status === 200 && response.data) {
           setPost(response.data);
         }
@@ -92,54 +91,44 @@ const Update = () => {
     fetchData();
   }, []);
 
-  
-
-
-
-
-
-
-
-
   useEffect(() => {
     const getImage = async () => {
       if (file) {
         const data = new FormData();
         data.append("name", file.name);
         data.append("file", file);
-  
+
         try {
-          const response = await axios.post(uploadFile , data, {
+          const response = await axios.post(uploadFile, data, {
             headers: {
-              'Content-Type': 'multipart/form-data',
-              
+              "Content-Type": "multipart/form-data",
             },
           });
-          console.log("File Upload Response:", response);
-  
+
           if (response.status === 200 && response.data) {
-            post.picture = response.data; // Assuming the API returns the image URL or path
-            setImageURL(response.data); // Update imageURL state if needed
+            const imageUrl = response.data; // Ensure this is the image URL/path
+            setPost((prevPost) => ({ ...prevPost, picture: imageUrl })); // Update post if it's state
+            setImageURL(imageUrl); // Update imageURL state if needed
           }
         } catch (error) {
           console.error("Error uploading file:", error);
-          // Handle error appropriately
+          // Optionally, set an error state or display an error message
         }
       }
     };
+
     getImage();
-  }, [file]);
+  }, [file]); // Trigger when 'file' changes
 
   const updateBlogPost = async () => {
     try {
       const token = sessionStorage.getItem("accessToken");
-      const response = await axios.put(`${updatePost}/${post._id}`, post,{
+      const response = await axios.put(`${updatePost}/${post._id}`, post, {
         headers: {
           Authorization: token,
         },
-      }); // Replace with your actual endpoint and post data
-      console.log("Update Post Response:", response);
-  
+      });
+
       if (response.status === 200) {
         navigate(`/details/${id}`); // Navigate to the post details page
       }
@@ -155,7 +144,7 @@ const Update = () => {
 
   return (
     <Container>
-      <Image src={post.picture || url} alt="post" />
+      <img src={imageURL} alt="Uploaded" />
 
       <StyledFormControl>
         <label htmlFor="fileInput">

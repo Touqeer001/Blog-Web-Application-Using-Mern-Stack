@@ -60,7 +60,11 @@ const About = () => {
         <Text variant="h5">
           I'am a full satck devloper Specilaization in MERN Technology.
           <Box component="span" style={{ marginLeft: 5 }}>
-            <Link href="" color="inherit" target="_blank">
+            <Link
+              href="https://github.com/Touqeer001"
+              color="inherit"
+              target="_blank"
+            >
               <GitHub />
             </Link>
           </Box>
@@ -68,7 +72,11 @@ const About = () => {
         <Text variant="h5">
           Want to Talk wit me ? Reach out to me on.
           <Box component="span" style={{ marginLeft: 5 }}>
-            <Link href="" color="inherit" target="_blank">
+            <Link
+              href="https://github.com/Touqeer001"
+              color="inherit"
+              target="_blank"
+            >
               <Instagram />
             </Link>
           </Box>

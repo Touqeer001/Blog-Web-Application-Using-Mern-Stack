@@ -68,8 +68,8 @@ const Error = styled(Typography)`
 `;
 
 const loginInitialValues = {
-  username: "",
-  password: "",
+  username: "user",
+  password: "1234",
 };
 
 const signupInitialValues = {
@@ -81,6 +81,7 @@ const signupInitialValues = {
 const Login = ({ isUserAuthenticated }) => {
   const [login, setLogin] = useState(loginInitialValues);
   const [signup, setSignup] = useState(signupInitialValues);
+  
   const [error, showError] = useState(" ");
   const [account, toggleAccount] = useState("login");
 

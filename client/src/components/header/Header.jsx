@@ -7,7 +7,7 @@ const Component = styled(AppBar)`
   background: teal;
   font-family: initial;
   font-weight: bolder;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: -12px;
   margin-top: 5px;
 `;
@@ -29,7 +29,7 @@ const Container = styled(Toolbar)`
     }
 `;
 const Addcircle = styled(AccountCircleIcon)`
-  font-size: 34px;
+  font-size: 45px;
 `;
 const ImageStyle = styled("img")({
   width: 100,
@@ -56,7 +56,7 @@ const Header = () => {
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
         <Link to="/account">
-          <AccountCircleIcon />
+          <Addcircle />
         </Link>
       </Container>
     </Component>

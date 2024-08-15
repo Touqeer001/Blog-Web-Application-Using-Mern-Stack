@@ -6,8 +6,9 @@ import {
   deletePost,
   getPost,
   getAllPosts,
+  PhotoController,
 } from "../controller/post-controller.js";
-import { uploadImage, getImage } from "../controller/image-controller.js";
+
 import {
   newComment,
   getComments,
@@ -22,6 +23,7 @@ import {
   authenticateToken,
   createNewToken,
 } from "../controller/jwt-controller.js";
+import { uploadImage, getImage } from '../controller/image-controller.js';
 
 import upload from "../utils/upload.js";
 
@@ -41,8 +43,9 @@ router.delete("/delete/:id", authenticateToken, deletePost);
 router.get("/post/:id", authenticateToken, getPost);
 router.get("/posts", authenticateToken, getAllPosts);
 
-router.post("/file/upload", upload.single("file"), uploadImage);
-router.get("/file/:filename", getImage);
+ router.post("/file/upload", upload.single("file"), uploadImage);
+ router.get("/file/:filename", getImage);
+router.get("/product-photo/:pid", PhotoController);
 
 router.post("/comment/new", authenticateToken, newComment);
 router.get("/comments/:id", authenticateToken, getComments);

@@ -13,3 +13,6 @@ export const     newComment= `${host}/comment/new`;
 export const      getAllComments= `${host}/comments`;
 export const     deleteComment= `${host}/comment/delete`;
 export const     updatePost= `${host}/update`;
+
+export const uploadImage=`${host}/upload`;
+export const getImageById=`${host}/image/:id`;

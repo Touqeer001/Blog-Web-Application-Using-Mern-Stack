@@ -1,3 +1,4 @@
+import post from "../model/post.js";
 import Post from "../model/post.js";
 
 export const createPost = async (request, response) => {
@@ -63,3 +64,34 @@ export const getAllPosts = async (request, response) => {
     response.status(500).json(error);
   }
 };
+
+export const PhotoController = async (req, res) => {
+  try {
+    const pid = req.params.pid;
+    if (!pid || !mongoose.Types.ObjectId.isValid(pid)) {
+      return res.status(400).send({
+        success: false,
+        message: "Invalid product ID"
+      });
+    }
+
+    const product = await post.findById(pid).select("photo");
+    if (!product || !product.photo || !product.photo.data) {
+      return res.status(404).send({
+        success: false,
+        message: "Photo not found"
+      });
+    }
+
+    res.set("Content-type", product.photo.contentType);
+    return res.status(200).send(product.photo.data);
+  } catch (error) {
+   
+    res.status(500).send({
+      success: false,
+      message: "Error while getting photo",
+      error,
+    });
+  }
+};
+

@@ -57,7 +57,7 @@ const Comment = ({ comment, setToggle }) => {
           Authorization: token, // Include the token in the Authorization header
         },
       });
-      console.log("Delete Comment Response:", response);
+     
   
       if (response.status === 200) {
         setToggle((prev) => !prev); // Toggle the state to refresh the comments list

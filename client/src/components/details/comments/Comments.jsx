@@ -51,7 +51,7 @@ const Comments = ({ post }) => {
             Authorization: token, // Include the token in the Authorization header
           },
         });
-        console.log("Get All Comments Response:", response);
+     
   
         if (response.status === 200 && response.data) {
           setComments(response.data);
@@ -84,7 +84,7 @@ const Comments = ({ post }) => {
         },
       }); // Pass the comment data
   
-      console.log("Add Comment Response:", response);
+  
   
       if (response.status === 200) {
         setComment(initialValue); // Reset the comment input field

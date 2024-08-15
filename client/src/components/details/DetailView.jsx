@@ -87,8 +87,8 @@ const DetailView = () => {
           headers: {
             Authorization: token, // Include the token in the Authorization header
           },
-        }); // Fetch post by ID
-        console.log("Get Post by ID Response:", response);
+        }); 
+   
 
         if (response.status === 200) {
           setPost(response.data);
@@ -109,8 +109,8 @@ const DetailView = () => {
         headers: {
           Authorization: token, 
         },
-      }); // Delete post by ID
-      console.log("Delete Post Response:", response);
+      }); 
+     
 
       if (response.status === 200) {
         navigate("/"); // Redirect to home after deletion
@@ -123,7 +123,7 @@ const DetailView = () => {
 
   return (
     <Container>
-      <Image src={post.picture || url} alt="post" />
+       <Image src={post.picture || url} alt="post" />
       <Box style={{ float: "right" }}>
         {account.username === post.username && (
           <Box>

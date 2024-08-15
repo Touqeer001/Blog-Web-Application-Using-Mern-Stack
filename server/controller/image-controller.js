@@ -21,41 +21,14 @@ export const uploadImage = (request, response) => {
   response.status(200).json(imageUrl);
 };
 
-// export const getImage = async (request, response) => {
-//   try {
-//     const filename = request.params.filename;
-//     console.log("Filename requested:", filename);
-    
-//     const file = await gfs.files.findOne({ filename: filename });
-    
-//     if (!file) {
-//       return response.status(404).json({ msg: "File not found" });
-//     }
-
-//     const readStream = gridfsBucket.openDownloadStream(file._id);
-//     readStream.pipe(response);
-//   } catch (error) {
-//     response.status(500).json({ msg: error.message });
-//   }
-// };
-
 export const getImage = async (request, response) => {
   try {
-    const filename = "1723308868450-blog-My profile photo.jpeg";
-    console.log("Attempting to retrieve file:", filename);
-
-    const file = await gfs.files.findOne({ filename: filename });
-    console.log("File found:", file);
-
-    if (!file) {
-      return response.status(404).json({ msg: "File not found" });
-    }
-
+    const file = await gfs.files.findOne({ filename: request.params.filename });
+    // const readStream = gfs.createReadStream(file.filename);
+    // readStream.pipe(response);
     const readStream = gridfsBucket.openDownloadStream(file._id);
     readStream.pipe(response);
   } catch (error) {
     response.status(500).json({ msg: error.message });
   }
 };
-
-

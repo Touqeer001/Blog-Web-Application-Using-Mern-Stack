@@ -22,9 +22,7 @@ const Posts = () => {
           headers: {
             Authorization: token,
           },
-        }); // Fetch posts with optional category filter
-
-        console.log("Get All Posts Response:", response);
+        });
 
         if (response.status === 200) {
           getPosts(response.data); // Set posts data

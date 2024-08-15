@@ -13,13 +13,14 @@ const Image = styled(Box)`
 
 const Heading = styled(Typography)`
     font-size: 70px;
-    // color: #FFFFFF;
+     
     line-height: 1
-    background: white;
+
     border-radius: 19px;
 
-     color: black;
+   
      margin: 0px 1px 12px;
+     color:white;
 `;
 
 const SubHeading = styled(Typography)`

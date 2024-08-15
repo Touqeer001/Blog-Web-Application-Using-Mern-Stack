@@ -1,5 +1,8 @@
 import { styled, Box, Typography } from "@mui/material";
 import { red } from "@mui/material/colors";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { getImageById } from "../../../utils/APIRoutes";
 
 const Container = styled(Box)`
   border: 1px solid #d3cede;
@@ -65,14 +68,29 @@ const Post = ({ post }) => {
   };
 
   return (
+    // <Container>
+    //   <Image src={url} alt="post" />
+    //   <Text>{post.categories}</Text>
+    //   <Heading style={{ color: "Black", textAlign: "center" }}>
+    //     {addEllipsis(post.title, 20)}
+    //   </Heading>
+    //   <Text>Author-Name: {post.username}</Text>
+    //   <Details>Details:{addEllipsis(post.description, 100)}</Details>
+    // </Container>
     <Container>
+      {/* Display the fetched image or a fallback URL */}
+
       <Image src={url} alt="post" />
+
       <Text>{post.categories}</Text>
+
       <Heading style={{ color: "Black", textAlign: "center" }}>
         {addEllipsis(post.title, 20)}
       </Heading>
+
       <Text>Author-Name: {post.username}</Text>
-      <Details>Details:{addEllipsis(post.description, 100)}</Details>
+
+      <Details>Details: {addEllipsis(post.description, 100)}</Details>
     </Container>
   );
 };
