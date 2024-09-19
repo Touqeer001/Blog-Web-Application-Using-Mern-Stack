@@ -9,8 +9,7 @@ dotenv.config();
 
 export const singupUser = async (request, response) => {
   try {
-    // const salt = await bcrypt.genSalt();
-    // const hashedPassword = await bcrypt.hash(request.body.password, salt);
+ 
     const hashedPassword = await bcrypt.hash(request.body.password, 10);
 
     const user = {
