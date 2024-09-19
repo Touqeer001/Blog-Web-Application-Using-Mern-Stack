@@ -1,4 +1,5 @@
-export const host = "http://localhost:8080";
+// export const host = "http://localhost:8080";
+export const host = "https://blog-backend-project-deployees.onrender.com";
 
 
 export const userLogin= `${host}/login`;

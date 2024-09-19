@@ -24,7 +24,7 @@ app.use("/", Router);
 const __dirname = path.dirname(new URL(import.meta.url).pathname); 
 app.use('/file', express.static(path.join(__dirname, 'uploads')));
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
